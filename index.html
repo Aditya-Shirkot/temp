@@ -297,12 +297,22 @@
   /* ─── INDUS VALLEY ─── */
   .indus-grid {
     display: grid;
+    justify-content:center;
+    align-items:start;
+    margin-inline:auto;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-top: 3rem;
     align-items: start;
   }
-  @media(max-width: 768px) { .indus-grid { grid-template-columns: 1fr; } }
+  @media(max-width: 768px) { .indus-grid { 
+    grid-template-columns: 1fr; 
+     
+    width:100%;
+
+    margin-inline:auto;
+
+    justify-items:center; } }
 
   .evidence-box {
     background: rgba(240,180,41,0.04);
@@ -788,9 +798,11 @@ iframe{
 
   .nav-links{
     display:flex;
-    gap:0.2rem;
-    overflow-x:auto;
-    scrollbar-width:none;
+    justify-content:space-between;
+    align-items:center;
+    gap:0.15rem;
+    width:100%;
+    overflow:visible;
   }
 
   .nav-links::-webkit-scrollbar{
@@ -804,9 +816,16 @@ iframe{
     display:none;
   }
 
+  .nav-links li{
+    flex:1;
+  }
+
   .nav-links a{
-    font-size:0.56rem;
-    padding:0.35rem 0.45rem;
+    display:block;
+    text-align:center;
+    font-size:0.54rem;
+    padding:0.38rem 0.2rem;
+    letter-spacing:0.03em;
     white-space:nowrap;
   }
 
@@ -861,9 +880,44 @@ iframe{
     grid-template-columns:1fr !important;
   }
 
-  .phil-table,
-  .compare-table{
-    min-width:650px;
+  .phil-table-wrapper{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    -webkit-overflow-scrolling:touch;
+
+    border-radius:8px;
+  }
+
+  .phil-table{
+
+    min-width:560px;
+
+    border-collapse:collapse;
+  }
+
+  .phil-table th{
+
+    font-size:0.72rem;
+
+    padding:0.85rem 0.7rem;
+
+    white-space:nowrap;
+
+    letter-spacing:0.05em;
+  }
+
+  .phil-table td{
+
+    font-size:0.82rem;
+
+    line-height:1.6;
+
+    padding:0.85rem 0.75rem;
+
+    vertical-align:top;
   }
 
   .full-timeline::before{
@@ -917,6 +971,27 @@ iframe{
 }
 
 @media(max-width:480px){
+
+  .phil-table{
+
+    min-width:520px;
+  }
+
+  .phil-table th{
+
+    font-size:0.66rem;
+
+    padding:0.75rem 0.6rem;
+  }
+
+  .phil-table td{
+
+    font-size:0.78rem;
+
+    line-height:1.55;
+
+    padding:0.75rem 0.65rem;
+  }
 
   .hero-title{
     font-size:2rem;
