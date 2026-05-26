@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Knowledge Civilization — Ancient Universities of India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sandstone: #C8A97A;
+  --sandstone-light: #E8D5B0;
+  --sandstone-dark: #8B6914;
+  --ivory: #F5EDD8;
+  --ivory-warm: #EDE0C0;
+  --copper: #B87333;
+  --copper-bright: #D4884A;
+  --deep-blue: #1A2744;
+  --deep-blue-mid: #243358;
+  --ink: #0D0906;
+  --ink-mid: #1C1208;
+  --aged-paper: #F2E8C8;
+  --rust: #8B3A1A;
+  --forest: #2D4A2A;
+  --manuscript: #D4C5A0;
+  --gold: #C9A227;
+  --gold-bright: #F0C040;
+  --text-primary: #1C1208;
+  --text-secondary: #4A3728;
+  --text-muted: #7A6548;
+  --border-subtle: rgba(180,140,80,0.25);
+  --border-strong: rgba(180,140,80,0.55);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+
+html { scroll-behavior: smooth; }
+
+html,
+body{
+  overscroll-behavior:none;
+}
+
+body.modal-open{
+  overflow:hidden;
+  touch-action:none;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body {
+  font-family: 'Crimson Pro', 'Libre Baskerville', Georgia, serif;
+  background: var(--ink);
+  color: var(--ivory);
+  overflow-x: hidden;
+  line-height: 1.75;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--stone); }
+::-webkit-scrollbar-thumb { background: var(--sandstone); border-radius: 3px; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(13,9,6,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0 2rem;
+  display: flex; align-items: center; gap: 2rem;
+  height: 56px;
+}
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--sandstone); text-decoration: none;
+  white-space: nowrap;
+}
+.nav-links { display: flex; gap: 1.5rem; margin-left: auto; }
+.nav-links a {
+  font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--manuscript); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--sandstone); }
+
+/* ─── HERO ─── */
+#hero {
+  min-height: 100svh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 2rem 6rem;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% 60%, rgba(26,39,68,0.6) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 60% at 30% 20%, rgba(139,105,20,0.15) 0%, transparent 60%),
+    linear-gradient(170deg, #0D0906 0%, #1A1008 35%, #0F0C18 65%, #0D0906 100%);
+}
+
+.hero-glyph {
+  position: absolute; font-family: 'Cormorant Garamond', serif;
+  opacity: 0.04; color: var(--sandstone); pointer-events: none;
+  animation: floatGlyph linear infinite;
+  line-height: 1;
+}
+@keyframes floatGlyph {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.hero-constellation {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+}
+.star {
+  position: absolute; width: 2px; height: 2px;
+  border-radius: 50%; background: var(--gold);
+  animation: twinkle ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%,100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.5); }
+}
+
+.hero-emblem {
+  width: 80px; height: 80px; margin: 0 auto 2rem;
+  border: 1.5px solid var(--sandstone);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; color: var(--sandstone);
+  position: relative;
+  animation: pulseRing 3s ease-in-out infinite;
+}
+.hero-emblem::before {
+  content: '';
+  position: absolute; inset: -6px;
+  border: 1px solid rgba(200,169,122,0.3);
+  border-radius: 50%;
+  animation: pulseRing 3s ease-in-out infinite 0.5s;
+}
+@keyframes pulseRing {
+  0%,100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.hero-eyebrow {
+  font-family: 'Crimson Pro', serif; font-size: 0.85rem;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--sandstone); margin-bottom: 1.5rem;
+  opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 300; line-height: 1.1; letter-spacing: -0.01em;
+  color: var(--ivory);
+  opacity: 0; animation: fadeUp 1s ease 0.5s forwards;
+  max-width: 800px; margin: 0 auto 1.5rem;
+}
+.hero-title em { font-style: italic; color: var(--sandstone); }
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 300;
+  color: var(--manuscript); max-width: 600px; margin: 0 auto 2.5rem;
+  opacity: 0; animation: fadeUp 1s ease 0.7s forwards;
+}
+.hero-meta {
+  display: flex; gap: 2rem; justify-content: center;
+  margin-bottom: 3rem;
+  opacity: 0; animation: fadeUp 1s ease 0.9s forwards;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  text-align: center; padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-subtle);
+  background: rgba(200,169,122,0.05);
+}
+.hero-stat-num {
+  display: block; font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: var(--sandstone);
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hero-ctas {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 1s ease 1.1s forwards;
+}
+.btn-primary {
+  padding: 0.85rem 2.5rem; font-family: 'Crimson Pro', serif;
+  font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase;
+  background: var(--sandstone); color: var(--ink);
+  border: none; cursor: pointer; text-decoration: none;
+  transition: background 0.25s, transform 0.15s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--sandstone-light); transform: translateY(-1px); }
+.btn-ghost {
+  padding: 0.85rem 2.5rem; font-family: 'Crimson Pro', serif;
+  font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase;
+  background: transparent; color: var(--sandstone);
+  border: 1px solid var(--sandstone); cursor: pointer; text-decoration: none;
+  transition: background 0.25s, transform 0.15s;
+  display: inline-block;
+}
+.btn-ghost:hover { background: rgba(200,169,122,0.1); transform: translateY(-1px); }
+
+.hero-scroll {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0; animation: fadeIn 1s ease 1.5s forwards;
+}
+.scroll-line {
+  width: 1px; height: 40px; background: linear-gradient(to bottom, var(--sandstone), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%,100% { transform: scaleY(1); opacity: 0.5; }
+  50% { transform: scaleY(1.3); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 0.7; }
+}
+
+/* ─── SECTIONS ─── */
+section { padding: 6rem 2rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+.container-wide { max-width: 1300px; margin: 0 auto; }
+
+.section-label {
+  font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--sandstone); margin-bottom: 1rem;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2;
+  color: var(--ivory); margin-bottom: 1.5rem;
+}
+.section-title em { font-style: italic; color: var(--sandstone); }
+.section-intro {
+  font-size: 1.1rem; color: var(--manuscript);
+  max-width: 700px; line-height: 1.8;
+}
+
+.divider {
+  width: 80px; height: 1px; background: var(--sandstone);
+  margin: 2rem 0; opacity: 0.5;
+}
+
+/* ─── INTRO ─── */
+#intro { background: var(--ink-mid); }
+
+.institution-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5px; margin: 3rem 0;
+  border: 1.5px solid var(--border-strong);
+}
+.inst-card {
+  padding: 2rem 1.5rem;
+  background: rgba(200,169,122,0.03);
+  border-right: 1px solid var(--border-subtle);
+  transition: background 0.3s;
+}
+.inst-card:hover { background: rgba(200,169,122,0.08); }
+.inst-icon { font-size: 1.6rem; margin-bottom: 0.75rem; }
+.inst-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
+  color: var(--sandstone); margin-bottom: 0.25rem;
+}
+.inst-sanskrit { font-style: italic; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+.inst-desc { font-size: 0.95rem; color: var(--manuscript); line-height: 1.7; }
+
+.timeline-section { margin: 4rem 0; }
+.timeline {
+  position: relative; padding-left: 2rem;
+  border-left: 2px solid var(--border-subtle);
+}
+.tl-item { margin-bottom: 2.5rem; position: relative; }
+.tl-dot {
+  position: absolute; left: -2.4rem; top: 0.3rem;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--sandstone); border: 2px solid var(--ink-mid);
+}
+.tl-era {
+  font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--sandstone); margin-bottom: 0.25rem;
+}
+.tl-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.25rem;
+  color: var(--ivory); margin-bottom: 0.5rem;
+}
+.tl-body { font-size: 0.95rem; color: var(--manuscript); }
+
+/* ─── UNIVERSITIES ─── */
+#universities { background: linear-gradient(180deg, var(--ink) 0%, #0A0C14 100%); }
+
+.univ-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2px; margin-top: 3rem;
+}
+.univ-card {
+  background: rgba(20,15,10,0.8);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden; cursor: pointer;
+  transition: border-color 0.3s, transform 0.2s;
+  position: relative;
+}
+.univ-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--sandstone), transparent);
+  transform: scaleX(0); transition: transform 0.4s;
+}
+.univ-card:hover::before { transform: scaleX(1); }
+.univ-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+
+.univ-header {
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+.univ-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300;
+  color: rgba(200,169,122,0.15); line-height: 1;
+}
+.univ-era {
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--sandstone); background: rgba(200,169,122,0.1);
+  padding: 0.3rem 0.75rem; white-space: nowrap;
+}
+.univ-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 500;
+  color: var(--ivory); padding: 0 2rem 0.25rem;
+}
+.univ-sanskrit-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 1rem;
+  font-style: italic; color: var(--sandstone);
+  padding: 0 2rem 0.5rem;
+}
+.univ-loc {
+  font-size: 0.82rem; color: var(--text-muted); padding: 0 2rem 1rem;
+  letter-spacing: 0.05em;
+}
+.univ-body { padding: 1rem 2rem 1.5rem; }
+.univ-stat-row {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;
+}
+.tag {
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--sandstone); background: rgba(200,169,122,0.08);
+  border: 1px solid rgba(200,169,122,0.2);
+  padding: 0.25rem 0.65rem;
+}
+.univ-desc { font-size: 0.98rem; color: var(--manuscript); margin-bottom: 1.25rem; }
+.univ-details { display: none; }
+.univ-details.open { display: block; }
+.detail-section { margin-bottom: 1.25rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem; }
+.detail-label {
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--copper); margin-bottom: 0.4rem;
+}
+.detail-text { font-size: 0.92rem; color: var(--manuscript); }
+.univ-expand {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--sandstone); background: none; border: none; cursor: pointer;
+  padding: 0 2rem 1.5rem; transition: color 0.2s;
+}
+.univ-expand:hover { color: var(--sandstone-light); }
+.expand-icon { font-size: 1rem; transition: transform 0.3s; }
+.univ-expand.open .expand-icon { transform: rotate(180deg); }
+
+/* ========================= UNIVERSITY MODAL ========================= */
+
+.univ-modal{
+
+  position:fixed;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.82);
+
+  backdrop-filter:blur(8px);
+
+  z-index:1000;
+
+  display:none;
+
+  /* CENTER MODAL */
+  justify-content:center;
+  align-items:center;
+
+  padding:20px;
+}
+
+/* ========================= MODAL BOX ========================= */
+
+.univ-modal-content{
+
+  width:100%;
+  max-width:950px;
+
+  background:#121722;
+
+  border:1px solid rgba(255,255,255,0.1);
+
+  border-radius:22px;
+
+  /* IMPORTANT */
+  padding:0;
+
+  position:relative;
+
+  animation:modalFade 0.35s ease;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 20px 80px rgba(0,0,0,0.55);
+}
+
+/* ========================= INNER SCROLL AREA ========================= */
+
+.univ-modal-scroll{
+
+  overflow-y:auto;
+
+  max-height:90vh;
+
+  padding:40px;
+
+  /* SAFE SPACE FOR CLOSE BUTTON */
+  padding-right:60px;
+}
+
+/* ========================= CUSTOM SCROLLBAR ========================= */
+
+.univ-modal-scroll::-webkit-scrollbar{
+  width:8px;
+}
+
+.univ-modal-scroll::-webkit-scrollbar-track{
+  background:rgba(255,255,255,0.04);
+  border-radius:20px;
+}
+
+.univ-modal-scroll::-webkit-scrollbar-thumb{
+  background:rgba(200,169,122,0.35);
+  border-radius:20px;
+}
+
+.univ-modal-scroll::-webkit-scrollbar-thumb:hover{
+  background:rgba(200,169,122,0.55);
+}
+
+/* ========================= ANIMATION ========================= */
+
+@keyframes modalFade{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ========================= CLOSE BUTTON ========================= */
+
+.modal-close{
+
+  position:absolute;
+
+  top:18px;
+  right:18px;
+
+  width:42px;
+  height:42px;
+
+  border:none;
+  border-radius:50%;
+
+  background:rgba(255,255,255,0.08);
+
+  color:#fff;
+
+  cursor:pointer;
+
+  font-size:1rem;
+
+  transition:0.3s;
+
+  z-index:20;
+}
+
+.modal-close:hover{
+
+  transform:rotate(90deg);
+
+  background:rgba(255,255,255,0.16);
+}
+
+/* ========================= CONTENT ========================= */
+
+.modal-univ-name{
+
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:3rem;
+
+  color:#fff;
+
+  margin-bottom:10px;
+}
+
+.modal-univ-sanskrit{
+
+  font-family:'Cormorant Garamond', serif;
+
+  font-style:italic;
+
+  font-size:1.1rem;
+
+  color:#c8a97a;
+
+  margin-bottom:18px;
+}
+
+.modal-univ-location{
+
+  color:#9ca3af;
+
+  margin-bottom:25px;
+
+  letter-spacing:0.05em;
+}
+
+.modal-tags{
+  margin-bottom:30px;
+}
+
+.modal-univ-desc{
+
+  color:#d6d3d1;
+
+  line-height:1.9;
+
+  font-size:1rem;
+
+  margin-bottom:30px;
+}
+
+/* ========================= DETAILS ========================= */
+
+.modal-details .detail-section{
+
+  border-top:1px solid rgba(255,255,255,0.08);
+
+  padding-top:20px;
+
+  margin-top:20px;
+}
+
+.modal-details .detail-label{
+
+  color:#c8a97a;
+
+  margin-bottom:10px;
+}
+
+.modal-details .detail-text{
+
+  color:#d6d3d1;
+
+  line-height:1.9;
+}
+
+/* ========================= MOBILE ========================= */
+
+@media(max-width:768px){
+
+  .univ-modal{
+    padding:10px;
+  }
+
+  .reveal{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+  
+  .univ-modal-scroll{
+
+    padding:24px;
+
+    padding-right:50px;
+
+    max-height:78vh;
+  }
+
+  .modal-univ-name{
+    font-size:2.2rem;
+  }
+
+  .modal-univ-sanskrit{
+    font-size:1rem;
+  }
+
+  .modal-univ-desc{
+    font-size:0.95rem;
+    line-height:1.8;
+  }
+
+  .modal-close{
+
+    width:38px;
+    height:38px;
+
+    top:12px;
+    right:12px;
+  }
+}
+
+/* ─── SUBJECTS ─── */
+#subjects { background: var(--ink-mid); }
+
+.subject-categories {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem; margin-top: 3rem;
+}
+.subj-cat {
+  border: 1px solid var(--border-subtle); padding: 1.75rem;
+  position: relative; overflow: hidden;
+}
+.subj-cat::after {
+  content: attr(data-glyph);
+  position: absolute; right: -0.5rem; bottom: -1rem;
+  font-family: 'Cormorant Garamond', serif; font-size: 5rem;
+  color: rgba(200,169,122,0.06); pointer-events: none; line-height: 1;
+}
+.subj-cat-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.25rem;
+  color: var(--sandstone); margin-bottom: 0.75rem;
+}
+.subj-list {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+.subj-list li {
+  font-size: 0.82rem; color: var(--manuscript);
+  background: rgba(200,169,122,0.06);
+  padding: 0.2rem 0.6rem;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.subj-list li:hover { border-color: var(--border-subtle); }
+
+/* ─── SCHOLARS ─── */
+#scholars { background: var(--ink); }
+
+.scholar-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem; margin-top: 3rem;
+}
+.scholar-card {
+  border: 1px solid var(--border-subtle); overflow: hidden;
+  position: relative;
+}
+.scholar-accent {
+  height: 4px;
+  background: linear-gradient(90deg, var(--sandstone-dark), var(--gold));
+}
+.scholar-body { padding: 1.75rem; }
+.scholar-era {
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--copper); margin-bottom: 0.5rem;
+}
+.scholar-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 500;
+  color: var(--ivory); margin-bottom: 0.25rem;
+}
+.scholar-title-text { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem; }
+.scholar-bio { font-size: 0.95rem; color: var(--manuscript); margin-bottom: 1.25rem; line-height: 1.75; }
+.scholar-works { display: flex; flex-direction: column; gap: 0.4rem; }
+.work-item {
+  font-size: 0.82rem; display: flex; align-items: flex-start; gap: 0.5rem;
+  color: var(--manuscript);
+}
+.work-item::before { content: '◇'; color: var(--sandstone); font-size: 0.7rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+/* ─── STUDENT LIFE ─── */
+#student-life {
+  background: linear-gradient(180deg, #0A0C14 0%, var(--ink-mid) 100%);
+}
+.life-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1px; margin-top: 3rem;
+  border: 1px solid var(--border-subtle);
+}
+.life-item {
+  padding: 2rem 1.75rem;
+  background: rgba(20,15,10,0.6);
+  border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.life-icon { font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--sandstone); }
+.life-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+  color: var(--ivory); margin-bottom: 0.5rem;
+}
+.life-text { font-size: 0.9rem; color: var(--manuscript); line-height: 1.7; }
+
+/* ─── DESTRUCTION ─── */
+#decline { background: var(--ink); }
+
+.decline-cards {
+  display: grid; gap: 1.5rem; margin-top: 3rem;
+}
+.decline-card {
+  border-left: 3px solid var(--rust);
+  padding: 1.75rem 2rem;
+  background: rgba(139,58,26,0.06);
+}
+.decline-card-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 1rem; gap: 1rem;
+}
+.decline-univ {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
+  color: var(--ivory);
+}
+.decline-date { font-size: 0.8rem; color: var(--rust); letter-spacing: 0.1em; }
+.decline-body { font-size: 0.95rem; color: var(--manuscript); margin-bottom: 1rem; }
+.source-note {
+  font-size: 0.82rem; color: var(--text-muted); font-style: italic;
+  border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;
+}
+.evidence-type {
+  display: inline-block; font-size: 0.7rem; letter-spacing: 0.15em;
+  text-transform: uppercase; padding: 0.2rem 0.65rem;
+  margin-bottom: 0.5rem;
+}
+.ev-literary { background: rgba(200,169,122,0.1); color: var(--sandstone); }
+.ev-archaeological { background: rgba(45,74,42,0.3); color: #8EC98A; }
+.ev-debated { background: rgba(139,105,20,0.2); color: var(--gold); }
+
+/* ─── SOURCES ─── */
+#sources { background: var(--ink-mid); }
+
+.sources-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem; margin-top: 3rem;
+}
+.source-card {
+  border: 1px solid var(--border-subtle); padding: 1.5rem;
+}
+.source-type {
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--copper); margin-bottom: 0.5rem;
+}
+.source-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
+  color: var(--sandstone); margin-bottom: 0.25rem;
+}
+.source-author { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+.source-note { font-size: 0.88rem; color: var(--manuscript); line-height: 1.7; }
+.reliability {
+  display: flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem;
+}
+.reliability-label { font-size: 0.72rem; letter-spacing: 0.1em; color: var(--text-muted); }
+.rel-dots { display: flex; gap: 3px; }
+.rel-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border-subtle); }
+.rel-dot.filled { background: var(--sandstone); }
+
+/* ─── FAQ ─── */
+#faq { background: var(--ink); }
+
+.faq-list { margin-top: 3rem; }
+.faq-item { border-bottom: 1px solid var(--border-subtle); }
+.faq-q {
+  width: 100%; text-align: left; padding: 1.5rem 0;
+  font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
+  color: var(--ivory); background: none; border: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--sandstone); }
+.faq-icon { font-size: 1.2rem; color: var(--sandstone); transition: transform 0.3s; flex-shrink: 0; }
+.faq-q.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  overflow: hidden; max-height: 0;
+  transition: max-height 0.5s ease, padding 0.3s;
+  font-size: 0.98rem; color: var(--manuscript);
+}
+.faq-a.open { max-height: 600px; padding-bottom: 1.5rem; }
+
+/* ─── CIVILIZATION SUMMARY ─── */
+#summary {
+  background: linear-gradient(180deg, #0A0C14, var(--ink));
+  text-align: center; padding: 8rem 2rem;
+  position: relative; overflow: hidden;
+}
+#summary::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(139,105,20,0.08), transparent 70%);
+}
+.summary-quote {
+  font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-style: italic; font-weight: 300;
+  color: var(--sandstone-light); max-width: 800px; margin: 0 auto 2rem;
+  line-height: 1.5; position: relative;
+}
+.summary-quote::before {
+  content: '"'; position: absolute; left: -1.5rem; top: -0.5rem;
+  font-size: 4rem; color: rgba(200,169,122,0.2); line-height: 1;
+}
+.summary-attr { font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.1em; }
+
+.legacy-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem; max-width: 900px; margin: 4rem auto 0;
+  text-align: left;
+}
+.legacy-item {
+  border-top: 2px solid var(--sandstone);
+  padding-top: 1.25rem;
+}
+.legacy-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 2rem;
+  color: rgba(200,169,122,0.3); line-height: 1; margin-bottom: 0.25rem;
+}
+.legacy-text { font-size: 0.9rem; color: var(--manuscript); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: #060402; border-top: 1px solid var(--border-subtle);
+  padding: 3rem 2rem; text-align: center;
+}
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
+  color: var(--sandstone); margin-bottom: 1rem;
+}
+.footer-note { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+.footer-disclaimer {
+  margin-top: 1.5rem; font-size: 0.78rem;
+  color: rgba(122,101,72,0.5); max-width: 700px; margin: 1.5rem auto 0;
+}
+
+/* ─── SCROLL REVEAL ─── */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ─── RESPONSIVE ─── */
+
+@media (max-width: 1024px) {
+  .container,
+  .container-wide {
+    width: 92%;
+  }
+
+  .univ-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .subject-categories,
+  .scholar-grid,
+  .sources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .nav-brand{
+    font-size:0.95rem;
+    letter-spacing:0.03em;
+  }
+
+  .nav-links {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.75rem;
+    scrollbar-width: none;
+  }
+
+  .nav-links a:nth-child(4),
+  .nav-links a:nth-child(5),
+  .nav-links a:nth-child(6){
+    display:none;
+  }
+
+  .nav-links a{
+    font-size:0.68rem;
+    white-space:nowrap;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  section {
+    padding: 4rem 1.25rem;
+  }
+
+  .hero-meta {
+    gap: 1rem;
+  }
+
+  .hero-stat {
+    padding: 0.6rem 1rem;
+  }
+
+  .subject-categories,
+  .scholar-grid,
+  .sources-grid,
+  .legacy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .univ-grid{
+    grid-template-columns:1fr;
+  }
+
+  .univ-modal-scroll {
+    padding: 20px;
+    padding-right: 20px;
+  }
+
+  .modal-univ-name {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .hero-title {
+    line-height: 1.15;
+  }
+
+  .timeline {
+    padding-left: 1.2rem;
+  }
+
+  .tl-dot {
+    left: -1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-stat {
+    width: 100%;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#hero">॥ Bharat Vidya ॥</a>
+  <div class="nav-links">
+    <a href="#intro">Origins</a>
+    <a href="#universities">Universities</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#scholars">Scholars</a>
+    <a href="#decline">Decline</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <!-- Stars -->
+  <div class="hero-constellation" id="stars"></div>
+  <!-- Floating Sanskrit glyphs -->
+  <div class="hero-glyph" style="font-size:12rem;top:5%;left:5%;animation-duration:18s;">ॐ</div>
+  <div class="hero-glyph" style="font-size:8rem;top:15%;right:8%;animation-duration:22s;animation-delay:-5s;">ज्ञ</div>
+  <div class="hero-glyph" style="font-size:10rem;bottom:15%;left:12%;animation-duration:25s;animation-delay:-10s;">विद्</div>
+  <div class="hero-glyph" style="font-size:7rem;bottom:25%;right:5%;animation-duration:20s;animation-delay:-7s;">धर्म</div>
+
+  <div class="hero-emblem">🏛</div>
+  <p class="hero-eyebrow">Bharat Vidya — Knowledge Civilization Archive</p>
+  <h1 class="hero-title">Universities That <em>Educated</em> the Ancient World</h1>
+  <p class="hero-subtitle">Journey through the great learning centers of ancient Bharat — from Takshashila to Nalanda — institutions that drew scholars from China, Central Asia, Southeast Asia, and beyond.</p>
+
+  <div class="hero-meta">
+    <div class="hero-stat">
+      <span class="hero-stat-num">~800</span>
+      <span class="hero-stat-label">Years before Oxford</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">10,000+</span>
+      <span class="hero-stat-label">Students at Nalanda</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">64</span>
+      <span class="hero-stat-label">Disciplines taught</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">700 BCE</span>
+      <span class="hero-stat-label">Takshashila founded</span>
+    </div>
+  </div>
+
+  <div class="hero-ctas">
+    <a class="btn-primary" href="#universities">Explore Universities</a>
+    <a class="btn-ghost" href="#scholars">View Scholars</a>
+    <a class="btn-ghost" href="#decline">The Burning</a>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    scroll to explore
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section id="intro">
+<div class="container">
+  <p class="section-label reveal">Foundations of Knowledge</p>
+  <h2 class="section-title reveal">How Ancient Bharat Organised <em>Learning</em></h2>
+  <p class="section-intro reveal">Long before the concept of a "university" emerged in medieval Europe, Bharat had developed sophisticated, multi-tiered systems of higher education rooted in oral tradition, residential learning, and rigorous intellectual debate.</p>
+
+  <div class="divider reveal"></div>
+
+  <!-- Institution types -->
+  <div class="institution-grid reveal">
+    <div class="inst-card">
+      <div class="inst-icon">🌿</div>
+      <div class="inst-name">Gurukul</div>
+      <div class="inst-sanskrit">गुरुकुल</div>
+      <div class="inst-desc">The most ancient form: students lived with a teacher (Guru), sharing domestic duties. Education was intimate, oral, and relational. Knowledge passed through direct transmission — <em>śruti</em> (that which is heard). Lasted typically 12 years.</div>
+    </div>
+    <div class="inst-card">
+      <div class="inst-icon">🌲</div>
+      <div class="inst-name">Āśrama</div>
+      <div class="inst-sanskrit">आश्रम</div>
+      <div class="inst-desc">Forest hermitages where rishis and sages transmitted Vedic, philosophical, and scientific knowledge. Often located near rivers. Distinguished from Gurukuls by their emphasis on tapas (austerity) and contemplative inquiry. The Upanishads emerged from this tradition.</div>
+    </div>
+    <div class="inst-card">
+      <div class="inst-icon">🏛</div>
+      <div class="inst-name">Mahāvihāra</div>
+      <div class="inst-sanskrit">महाविहार</div>
+      <div class="inst-desc">Large Buddhist monastic complexes that evolved into full universities. Supported by royal patronage. Featured permanent libraries, debate halls, multiple faculties, and international student populations. Nalanda is the supreme example.</div>
+    </div>
+    <div class="inst-card">
+      <div class="inst-icon">📜</div>
+      <div class="inst-name">Pāṭhaśālā</div>
+      <div class="inst-sanskrit">पाठशाला</div>
+      <div class="inst-desc">Village and town schools focused on literacy, numerics, grammar, and foundational religious education. The mass education tier beneath the elite universities. Supported largely by temple donations and merchant guilds.</div>
+    </div>
+    <div class="inst-card">
+      <div class="inst-icon">🔥</div>
+      <div class="inst-name">Takka / Vidyāpīṭha</div>
+      <div class="inst-sanskrit">विद्यापीठ</div>
+      <div class="inst-desc">Formal seats of higher learning, often associated with specific scholarly traditions (like the Nyāya school at Mithila). Specialised rather than encyclopaedic. Students travelled from across Bharat to study under specific masters.</div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline-section reveal">
+    <p class="section-label">Historical Evolution</p>
+    <h3 class="section-title" style="font-size:1.8rem;">A Timeline of <em>Vidyā</em></h3>
+    <div class="timeline" style="margin-top:2rem;">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-era">c. 1500–800 BCE</div>
+        <div class="tl-title">Vedic Oral Tradition</div>
+        <div class="tl-body">The Rigveda, Samaveda, Yajurveda, and Atharvaveda transmitted through rigorous memorisation systems (the <em>śākhā</em> system). The Guru-Śiṣya relationship is the foundational educational unit. No permanent institutions — knowledge moves with people.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-era">c. 800–500 BCE</div>
+        <div class="tl-title">Upanishadic Age — The Great Forest Universities</div>
+        <div class="tl-body">The Bṛhadāraṇyaka Upanishad records debates at the court of King Janaka — the first evidence of competitive intellectual culture. Yājñavalkya, Gārgī, and Maitreyi participate in open philosophical enquiry. Āśramas multiply. Jainism and proto-Buddhism begin forming their own educational lineages.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-era">c. 700–300 BCE</div>
+        <div class="tl-title">Takshashila — The First University City</div>
+        <div class="tl-body">Takshashila (in modern Pakistan) becomes the first recorded centre of higher learning that was not tied to a single guru. Multiple teachers, multiple subjects, residential students. Pāṇini studies here. Chandragupta Maurya trains under Chanakya here. Students arrive from Kosala, Kāśī, Magadha, and beyond.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-era">c. 300 BCE – 300 CE</div>
+        <div class="tl-title">Post-Mauryan Expansion</div>
+        <div class="tl-body">Buddhism spreads east and west. Monastic universities emerge across Magadha, Oḍisha, and Bengal. The <em>Mahāyāna</em> movement creates a more inclusive educational philosophy. Nāgārjuna founds the Mādhyamaka school at Nāgārjunakoṇḍā. Regional Brahmanical schools at Kāśī, Mathurā, and Ujjain deepen.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-era">c. 320–550 CE</div>
+        <div class="tl-title">The Gupta Golden Age</div>
+        <div class="tl-body">The Gupta empire provides the political stability and financial patronage for Bharat's greatest university era. Nalanda is either founded or significantly expanded under Kumāragupta I (c. 415–455 CE). Āryabhaṭa works at Kusumapura. Aryabhata writes the <em>Āryabhaṭīya</em>. Faxian (Fa-Hien), the Chinese pilgrim, records flourishing Buddhist institutions.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-era">c. 600–1200 CE</div>
+        <div class="tl-title">The Pāla Era — University Consolidation</div>
+        <div class="tl-body">The Pāla dynasty of Bengal becomes the last great Buddhist patron in India. Vikramaśīlā, Odantapurī, Jagaddala, and Somapura Mahāvihāra rise under Pāla kings. Xuanzang's earlier (7th century) accounts describe Nalanda at its zenith: 10,000 students, 2,000 teachers, 9 storeys of libraries.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-era">c. 1193–1320 CE</div>
+        <div class="tl-title">Destruction and Transition</div>
+        <div class="tl-body">Bakhtiyar Khilji's raids destroy multiple Pāla university cities in Bihar and Bengal (c. 1193–1205). Tibetan sources record Nalanda burning. Some scholars dispute the completeness of the destruction. Hindu Brahmanical schools at Kāśī, Mithilā, Navadvīpa, and Kanchipuram continue for centuries after.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- UNIVERSITIES -->
+<section id="universities">
+<div class="container-wide">
+  <div class="container">
+    <p class="section-label reveal">The Knowledge Seats</p>
+    <h2 class="section-title reveal">Great <em>Universities</em> of Ancient Bharat</h2>
+    <p class="section-intro reveal">Deeply detailed profiles of the most significant centres of learning. Click any card to expand its full historical record.</p>
+  </div>
+
+  <div class="univ-grid reveal" style="margin-top:3rem;">
+
+    <!-- TAKSHASHILA -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">01</div>
+        <span class="univ-era">c. 700 BCE – 500 CE</span>
+      </div>
+      <div class="univ-name">Takshashila</div>
+      <div class="univ-sanskrit-name">तक्षशिला — "City of Cut Stone"</div>
+      <div class="univ-loc">📍 Modern Taxila, Rawalpindi District, Pakistan</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">Vedic</span><span class="tag">Buddhist</span><span class="tag">Medical</span><span class="tag">Military</span><span class="tag">Grammar</span>
+        </div>
+        <div class="univ-desc">The oldest recorded centre of higher learning in South Asia, predating Nalanda by over a millennium. Not a single campus but a city where knowledge was centralised — different teachers held classes in their own homes, and students could seek out any master. Xuanzang's sources and Jātaka tales confirm its pan-Indic reputation.</div>
+        <div class="univ-details" id="det-1">
+          <div class="detail-section">
+            <div class="detail-label">Founding & Governance</div>
+            <div class="detail-text">No single royal founder is attested in verified history. The Mahābhārata and Rāmāyaṇa mention Takṣaśilā as a city of Takṣa, son of Bharata. Archaeological evidence from the ASI and earlier British excavations (Marshall, 1951) places the earliest occupation layers at c. 600 BCE. Unlike Nalanda, it had no central administration — it was an open city of scholars.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Admission & Teaching</div>
+            <div class="detail-text">Admission was through direct approach to a teacher. The Jātaka tales describe students walking months from Kāśī and Kosala to study here. Age of entry was typically 16, after completion of basic Vedic education. No entrance examination as such — the student's lineage, preparation, and purpose were assessed by the teacher directly. Fees were paid in labour (Guru-dakṣiṇā) or, for wealthy students, in gold.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Subjects & Famous Students</div>
+            <div class="detail-text">The full 18-Śilpa curriculum: the four Vedas, law (Dharmaśāstra), astronomy, medicine, archery, hunting, elephant lore, arithmetic, fine arts, and statecraft. Famous students: Pāṇini (grammarian, c. 4th century BCE), Chandragupta Maurya (under Cāṇakya/Kauṭilya), Jīvaka (physician to the Buddha, per Pali texts), and Prasenajit of Kosala. Cāṇakya himself was a student and later a teacher here.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Decline</div>
+            <div class="detail-text">First weakened by successive White Hun (Hephthalite) invasions in the 5th century CE. The invasions of Mihirakula (c. 515–540 CE) are specifically noted by Xuanzang for devastation of Buddhist monasteries in the region. The city did not recover its scholarly status after this period, though it continued as a settlement. Archaeological remains today are UNESCO-listed.</div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- NALANDA -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">02</div>
+        <span class="univ-era">c. 500 CE – 1200 CE</span>
+      </div>
+      <div class="univ-name">Nalanda</div>
+      <div class="univ-sanskrit-name">नालन्दा — "Lotus of Knowledge" or "Giver of Knowledge"</div>
+      <div class="univ-loc">📍 Modern Rajgir District, Bihar, India</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">Buddhist</span><span class="tag">Philosophy</span><span class="tag">Logic</span><span class="tag">Astronomy</span><span class="tag">Ayurveda</span>
+        </div>
+        <div class="univ-desc">The most celebrated university of the ancient world. At its peak, Nalanda housed approximately 10,000 students and 2,000 teachers, according to Xuanzang (Hsüan-tsang), who studied here for five years (635–640 CE). It was simultaneously a monastery, a university, a library complex, and an international diplomatic centre.</div>
+        <div class="univ-details" id="det-2">
+          <div class="detail-section">
+            <div class="detail-label">Patronage & Scale</div>
+            <div class="detail-text">Founded or greatly endowed by Kumāragupta I of the Gupta dynasty (r. 415–455 CE), though Pali tradition associates the land with Āmrapālī and early Buddhist connections. Subsequent patronage came from Harṣavardhana (7th century), and extensively from the Pāla dynasty (8th–12th century). A Chinese pilgrim account records 100 villages whose revenues went entirely to feeding the university population. The institution covered approximately 14 hectares of buildings.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Admission — The Fire of Debate</div>
+            <div class="detail-text">Admission to Nalanda was among the most demanding processes in the ancient world. Xuanzang records that a gatekeeper (dvārapaṇḍita — learned doorkeeper) posed difficult questions in logic, grammar, and philosophy. Only two or three out of ten applicants passed. Those who entered without answering correctly faced public humiliation. This was not elitism for its own sake but a pragmatic quality filter for a resource-limited institution.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Libraries — The Dharmagañja</div>
+            <div class="detail-text">Nalanda's library complex was called the Dharmagañja (Treasury of Truth), comprising three buildings: Ratnasāgara (Ocean of Jewels), Ratnadadhi, and Ratnarañjaka. Tibetan historian Tāranātha, writing in the 17th century, describes the library as nine storeys tall. This figure is disputed by modern historians as an exaggeration, but multiple independent sources confirm an exceptionally large manuscript collection in Sanskrit, Pali, and other languages.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Notable Faculty & Students</div>
+            <div class="detail-text">Faculty included: Śīlabhadra (who taught Xuanzang), Dharmapāla, Candrapāla, Ratnasimha. Notable students: Xuanzang (Tang dynasty China), Dharmapāla, Atiśa Dīpaṃkara (who carried Nalanda's tradition to Tibet), Śāntarakṣita, Kamalaśīla. Korean monk Hyecho visited in the early 8th century. The university maintained correspondence with rulers of Southeast Asia and Tibet.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Destruction — Scholarly Debates</div>
+            <div class="detail-text">
+              <span class="evidence-type ev-literary">Literary</span> Tibetan historian Dharmasvāmin (c. 1234 CE) recorded that he found some monks still teaching at a partially destroyed Nalanda decades after Bakhtiyar Khilji's campaign.<br><br>
+              <span class="evidence-type ev-archaeological">Archaeological</span> ASI excavations show burn layers consistent with a major destruction event, with carbonised material in library areas.<br><br>
+              <span class="evidence-type ev-debated">Debated</span> The precise dating, the scale of destruction, and whether Bakhtiyar's campaign was targeted at the university or was incidental to a military march toward Bengal remain debated among scholars like D.N. Jha and Romila Thapar.
+            </div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- VIKRAMASHILA -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">03</div>
+        <span class="univ-era">c. 783 CE – 1203 CE</span>
+      </div>
+      <div class="univ-name">Vikramaśīlā</div>
+      <div class="univ-sanskrit-name">विक्रमशीला — "Seat of Vikramaśīla's Vigour"</div>
+      <div class="univ-loc">📍 Antichak, Bhagalpur District, Bihar, India</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">Vajrayāna</span><span class="tag">Tantra</span><span class="tag">Logic</span><span class="tag">Grammar</span>
+        </div>
+        <div class="univ-desc">Founded by Dharmapāla of the Pāla dynasty (r. c. 783–820 CE), Vikramaśīlā was the second most important Buddhist university in medieval India. It specialised in Vajrayāna (tantric) Buddhism and trained many scholars who carried this tradition to Tibet. Atiśa Dīpaṃkara, the reformer of Tibetan Buddhism, was abbot here before going to Tibet in 1042 CE.</div>
+        <div class="univ-details" id="det-3">
+          <div class="detail-section">
+            <div class="detail-label">Structure & Administration</div>
+            <div class="detail-text">Vikramaśīlā had a more structured administration than the older Nalanda. It was headed by an abbot (kulapati) and had six colleges (dvāras), each with its own specialist gatekeeper-scholar responsible for a particular subject. The central temple was surrounded by 107 smaller temples. Approximately 1,000–3,000 monks and scholars resided here.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Tibetan Connection</div>
+            <div class="detail-text">The Tibetan king Ralpachen sent a delegation to invite a Nalanda/Vikramaśīlā scholar to Tibet. The relationship between Vikramaśīlā and Tibet was deep — many texts that survive only in Tibetan translation were originally collected or composed here. Atiśa's journey to Tibet in 1042 CE effectively transplanted the Vikramaśīlā tradition to the Himalayas, where it persists today.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Destruction</div>
+            <div class="detail-text">Destroyed by Bakhtiyar Khilji's forces circa 1203 CE. Tāranātha's account (17th century) describes the killing of monks and destruction of the complex. ASI excavations at Antichak since the 1970s have revealed a large cruciform stupa and residential cells consistent with the described layout.</div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- VALLABHI -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">04</div>
+        <span class="univ-era">c. 600 CE – 800 CE</span>
+      </div>
+      <div class="univ-name">Valabhī</div>
+      <div class="univ-sanskrit-name">वलभी — Named after the Valabhi kingdom</div>
+      <div class="univ-loc">📍 Modern Vala, Bhavnagar District, Gujarat, India</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">Hīnayāna</span><span class="tag">Law</span><span class="tag">State Policy</span><span class="tag">Jain Texts</span>
+        </div>
+        <div class="univ-desc">Often described as the "Nalanda of western India," Valabhī was the capital of the Maitraka dynasty and a major centre of Hīnayāna Buddhist learning. Xuanzang visited c. 640 CE and counted over 100 monasteries and 6,000 monks. Uniquely, it also trained students in statecraft and administration, producing graduates who entered royal service.</div>
+        <div class="univ-details" id="det-4">
+          <div class="detail-section">
+            <div class="detail-label">Distinct Character</div>
+            <div class="detail-text">Unlike Nalanda's emphasis on Mahāyāna philosophy, Valabhī was the leading centre of Sthavira (Theravāda/Hīnayāna) Buddhist scholarship in India. It was also more practically oriented — graduates were known to enter government administration. Jain sources note a significant council held here (the fifth Jain council, c. 453 CE) that codified Jain canonical texts — though this is attested in Jain tradition, not independently confirmed.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Decline</div>
+            <div class="detail-text">Valabhī declined sharply after Arab raids in the 8th century destroyed the Maitraka kingdom (c. 770 CE). Without royal patronage, the institution could not sustain itself. Unlike Nalanda, which had deep Pāla patronage, Valabhī's fate was tied entirely to a single dynasty.</div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- PUSHPAGIRI -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">05</div>
+        <span class="univ-era">c. 300 BCE – 1100 CE</span>
+      </div>
+      <div class="univ-name">Puṣpagiri</div>
+      <div class="univ-sanskrit-name">पुष्पगिरि — "Flower Mountain"</div>
+      <div class="univ-loc">📍 Udayagiri Hills, Jajpur District, Odisha, India</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">Buddhist</span><span class="tag">Maritime</span><span class="tag">Trade Networks</span>
+        </div>
+        <div class="univ-desc">Potentially one of the largest Buddhist university complexes of South Asia, only recently receiving sustained archaeological attention. A 2007 ASI survey and subsequent work at the Udayagiri-Lalitgiri-Ratnagiri triangle revealed massive monastery remains. Chinese texts mention a "Pushpagiri" rivalling Nalanda, and Xuanzang's account of Oḍra (Odisha) describes extensive monasteries.</div>
+        <div class="univ-details" id="det-5">
+          <div class="detail-section">
+            <div class="detail-label">Why It Was Forgotten</div>
+            <div class="detail-text">Puṣpagiri's relative obscurity in modern popular history reflects a geographical and political bias in scholarly attention — Bihar received disproportionate focus due to Buddhist pilgrimage infrastructure. The Oḍra Buddhist complex has been described by some archaeologists (Debala Mitra, ASI) as potentially the largest Buddhist complex on the subcontinent, spread across three separate hill sites.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Archaeological Status</div>
+            <div class="detail-text"><span class="evidence-type ev-archaeological">Archaeological</span> Systematic excavation at Ratnagiri and Udayagiri since the 1980s has revealed ninth- and tenth-century monastery structures, votive stupas, and a significant collection of bronzes and inscriptions in Sanskrit and archaic Oḍra script. The Ratnagiri site alone had a monastery with a 6-metre central Buddha image.</div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ODANTAPURI -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">06</div>
+        <span class="univ-era">c. 760 CE – 1197 CE</span>
+      </div>
+      <div class="univ-name">Odantapurī</div>
+      <div class="univ-sanskrit-name">ओदन्तपुरी — "City of the Ox-toothed One"</div>
+      <div class="univ-loc">📍 Bihar Sharif, Nalanda District, Bihar, India</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">Pāla Buddhist</span><span class="tag">Logic</span><span class="tag">Tantra</span>
+        </div>
+        <div class="univ-desc">Founded by the first Pāla king, Gopāla I (r. c. 750–770 CE), Odantapurī served as a model for the founding of Samye Monastery in Tibet (779 CE) — an extraordinary example of institutional knowledge transfer across the Himalayas. Tibetan texts record that the king of Tibet sent artisans specifically to study its architecture.</div>
+        <div class="univ-details" id="det-6">
+          <div class="detail-section">
+            <div class="detail-label">Tibetan Impact</div>
+            <div class="detail-text">The architectural plan of Odantapurī directly influenced the layout of Samye, Tibet's first monastery (779 CE), built under King Trisong Detsen. Śāntarakṣita, who had also studied at Nalanda, supervised the construction. This is one of the most direct and verifiable cases of institutional knowledge transfer from Bharat to Tibet in the historical record.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Destruction</div>
+            <div class="detail-text">One of the first universities destroyed in Bakhtiyar Khilji's 1193 campaign. Minhaj-i-Siraj's <em>Ṭabaqāt-i-Nāṣirī</em> records Bakhtiyar mistaking the monastery for a fortified castle, and the monks (shaven-headed, in robes) for Brahmins — suggesting the soldiers had no specific knowledge of Buddhist institutions. This Persian account is our primary narrative source.</div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SOMAPURA -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">07</div>
+        <span class="univ-era">c. 780 CE – 1220 CE</span>
+      </div>
+      <div class="univ-name">Somapura Mahāvihāra</div>
+      <div class="univ-sanskrit-name">सोमपुर महाविहार — "Great Monastery of Soma"</div>
+      <div class="univ-loc">📍 Paharpur, Rajshahi Division, Bangladesh</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">UNESCO World Heritage</span><span class="tag">Pāla</span><span class="tag">International</span>
+        </div>
+        <div class="univ-desc">Founded by Dharmapāla (r. c. 783–820 CE), Somapura's excavated remains at Paharpur are among the most impressive in South Asia and are UNESCO-listed. The monastery was the largest of its kind south of the Himalayas — nearly 900 cells arranged around a cruciform central temple. It influenced the temple architecture of Burma and Cambodia.</div>
+        <div class="univ-details" id="det-7">
+          <div class="detail-section">
+            <div class="detail-label">Architecture & Global Influence</div>
+            <div class="detail-text">The cruciform central temple of Somapura has been identified by scholars (including Robert Brown) as the architectural prototype for the central temple of the Ananda Temple in Bagan, Myanmar (c. 1090 CE). If this connection holds, it represents a direct line of cultural transmission from Bengali Buddhist learning to Southeast Asian religious architecture.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Archaeological Remains</div>
+            <div class="detail-text"><span class="evidence-type ev-archaeological">Archaeological</span> Excavations at Paharpur (begun 1923, major campaigns 1925–34) revealed 177 rooms on the ground floor alone, over 2,000 decorated terracotta plaques, inscriptions mentioning multiple Pāla kings, and evidence of a copper-smelting workshop — indicating industrial activity alongside scholarly life. Now protected under Bangladesh's Antiquities Act and UNESCO (1985).</div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- KANCHIPURAM -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">08</div>
+        <span class="univ-era">c. 200 CE – 1700 CE</span>
+      </div>
+      <div class="univ-name">Kāñcīpuram</div>
+      <div class="univ-sanskrit-name">काञ्चीपुरम् — "City of the Golden Loin-cloth" (Śiva)</div>
+      <div class="univ-loc">📍 Kanchipuram, Tamil Nadu, India</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">Vedānta</span><span class="tag">Buddhist</span><span class="tag">Jain</span><span class="tag">Sanskrit</span><span class="tag">Tamil</span>
+        </div>
+        <div class="univ-desc">Unlike the Pāla university cities of north India, Kāñcīpuram survived into the modern period as a living centre of Sanskrit learning. Uniquely, it was a seat of all three major intellectual traditions: Vedāntic Brahmanical learning, Buddhist philosophy (Dignāga, the logician, possibly studied or taught here), and Jain scholarship. The Kāmākṣī temple complex functioned as an institution of knowledge for over 1,500 years.</div>
+        <div class="univ-details" id="det-8">
+          <div class="detail-section">
+            <div class="detail-label">Intellectual Output</div>
+            <div class="detail-text">Dignāga (c. 480–540 CE), the founder of Buddhist formal logic, is associated with Kāñcī by Tibetan tradition, though this is contested. Dharmapāla, before becoming head of Nalanda, is said to have been a prince of Kāñcī. Bodhidharma, who transmitted Chan/Zen Buddhism to China, is by some accounts a prince of Kāñcī — though this remains legendary rather than historical. The Viśiṣṭādvaita philosopher Rāmānuja (11th–12th century) spent years here.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Continuity</div>
+            <div class="detail-text">Kāñcīpuram's survival as a Sanskrit learning centre while Buddhist institutions in the north were destroyed illustrates a crucial difference: Hindu Brahmanical learning was not centralised in large institutional monasteries requiring royal patronage. It was diffused through temple systems and lineage-based learning, making it structurally more resilient to political disruption.</div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MITHILA -->
+    <div class="univ-card">
+      <div class="univ-header">
+        <div class="univ-num">09</div>
+        <span class="univ-era">c. 600 BCE – 1800 CE</span>
+      </div>
+      <div class="univ-name">Mithilā Schools</div>
+      <div class="univ-sanskrit-name">मिथिला — "Land of Janaka"</div>
+      <div class="univ-loc">📍 Darbhanga–Madhubani region, Bihar, India</div>
+      <div class="univ-body">
+        <div class="univ-stat-row">
+          <span class="tag">Navya-Nyāya</span><span class="tag">Logic</span><span class="tag">Mīmāṃsā</span><span class="tag">Dharmaśāstra</span>
+        </div>
+        <div class="univ-desc">One of the most intellectually significant and historically overlooked centres of learning. The Navya-Nyāya (New Logic) school, which developed a sophisticated formal logic system comparable to modern symbolic logic, was centred in Mithilā. Scholars like Gaṅgeśa Upādhyāya (c. 14th century CE), who wrote the <em>Tattvacintāmaṇi</em>, founded this school here. Mithilā's scholarly tradition continued unbroken from the Vedic period to the colonial era.</div>
+        <div class="univ-details" id="det-9">
+          <div class="detail-section">
+            <div class="detail-label">Navya-Nyāya — India's Formal Logic</div>
+            <div class="detail-text">Navya-Nyāya developed a technical vocabulary of extraordinary precision for analysing propositions, cognitions, and inference. Philosophers like Raghunātha Śiromaṇi (c. 1477–1547 CE) pushed it toward something resembling modern predicate logic. This tradition was studied and engaged with by European Orientalists in the 18th century — Wilhelm Halbfass and others have written on its philosophical sophistication. It remains an active area of study in Sanskrit philosophy.</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Survival Through Disruption</div>
+            <div class="detail-text">Unlike the Buddhist mahāvihāras, the Mithilā schools survived the medieval political upheavals. Their survival strategy: smaller, more mobile learning networks anchored to families (the <em>Maithil Brahmin</em> scholarly families) rather than large stone institutions. Manuscript collections survived in private family libraries rather than centralised repositories. Many Navya-Nyāya manuscripts are still held by Maithil families today.</div>
+          </div>
+        </div>
+        <button class="univ-expand" onclick="openUniversityModal(this)">
+          <span>Expand Full Record</span><span class="expand-icon">▾</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- SUBJECTS -->
+<section id="subjects">
+<div class="container">
+  <p class="section-label reveal">The Curriculum</p>
+  <h2 class="section-title reveal">Sixty-Four <em>Vidyās</em> — Disciplines Taught</h2>
+  <p class="section-intro reveal">Ancient sources cite the <em>cathuḥṣaṣṭi kalā</em> — sixty-four arts and sciences — as the complete domain of knowledge. Institutional curricula varied by school and tradition.</p>
+
+  <div class="subject-categories reveal">
+    <div class="subj-cat" data-glyph="ॐ">
+      <div class="subj-cat-title">Sacred Sciences (Āgama)</div>
+      <ul class="subj-list">
+        <li>Ṛgveda</li><li>Sāmaveda</li><li>Yajurveda</li><li>Atharvaveda</li>
+        <li>Vedāṅgas (6)</li><li>Upaniṣads</li><li>Pūrva-Mīmāṃsā</li>
+        <li>Uttara-Mīmāṃsā</li><li>Dharmaśāstra</li><li>Purāṇas</li>
+      </ul>
+    </div>
+    <div class="subj-cat" data-glyph="∑">
+      <div class="subj-cat-title">Mathematics & Astronomy</div>
+      <ul class="subj-list">
+        <li>Gaṇita (arithmetic)</li><li>Bīja-gaṇita (algebra)</li>
+        <li>Rekhā-gaṇita (geometry)</li><li>Jyotiṣa (astronomy)</li>
+        <li>Pāṭī-gaṇita (calculation)</li><li>Karaṇa (computing tables)</li>
+        <li>Gola (spherical astronomy)</li><li>Tantra (astronomical treatises)</li>
+        <li>Zero & decimal system</li>
+      </ul>
+    </div>
+    <div class="subj-cat" data-glyph="⚕">
+      <div class="subj-cat-title">Medicine & Surgery</div>
+      <ul class="subj-list">
+        <li>Āyurveda (8 branches)</li><li>Śalya-tantra (surgery)</li>
+        <li>Śālākya (ENT & ophthalmology)</li><li>Kāyacikitsā (internal medicine)</li>
+        <li>Bhūtavidyā (psychiatry)</li><li>Kumārabhṛtya (pediatrics)</li>
+        <li>Agada-tantra (toxicology)</li><li>Rasāyana (rejuvenation)</li>
+        <li>Vājīkaraṇa (reproductive science)</li>
+      </ul>
+    </div>
+    <div class="subj-cat" data-glyph="⚖">
+      <div class="subj-cat-title">Logic & Philosophy</div>
+      <ul class="subj-list">
+        <li>Nyāya (logic)</li><li>Navya-Nyāya (formal logic)</li>
+        <li>Vaiśeṣika (atomism)</li><li>Sāṃkhya</li><li>Yoga-darśana</li>
+        <li>Madhyamaka (Buddhist)</li><li>Yogācāra (Buddhist)</li>
+        <li>Jain epistemology (Anekāntavāda)</li>
+        <li>Cārvāka / Lokāyata (materialism)</li>
+      </ul>
+    </div>
+    <div class="subj-cat" data-glyph="ग">
+      <div class="subj-cat-title">Language & Grammar</div>
+      <ul class="subj-list">
+        <li>Vyākaraṇa (Sanskrit grammar)</li><li>Nirukta (etymology)</li>
+        <li>Chandas (prosody/meter)</li><li>Śikṣā (phonetics)</li>
+        <li>Kāvya (poetics/literature)</li><li>Nāṭyaśāstra (dramaturgy)</li>
+        <li>Pali grammar</li><li>Prākrit languages</li><li>Apabhraṃśa</li>
+      </ul>
+    </div>
+    <div class="subj-cat" data-glyph="⚔">
+      <div class="subj-cat-title">Applied & Statecraft Sciences</div>
+      <ul class="subj-list">
+        <li>Arthaśāstra (statecraft)</li><li>Daṇḍanīti (jurisprudence)</li>
+        <li>Dhanurveda (archery/military)</li><li>Vāstuvidyā (architecture)</li>
+        <li>Śilpaśāstra (arts & crafts)</li><li>Kṛṣi (agriculture)</li>
+        <li>Aśvaśāstra (horse science)</li><li>Gaja-śāstra (elephant science)</li>
+        <li>Nāvyaśāstra (navigation)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider reveal" style="margin-top:3rem;"></div>
+  <p class="section-intro reveal" style="margin-top:1.5rem;font-size:0.95rem;">
+    <strong style="color:var(--sandstone);">A note on historical method:</strong> The full 64-discipline curriculum is attested in texts like the <em>Lalitavistara</em> and various Smṛiti literature, but individual institutions taught subsets. Takshashila's curriculum is known through Jātaka references (Pali). Nalanda's is reconstructed from Xuanzang's account and Tibetan bibliographies. No institution-specific original curriculum document survives.
+  </p>
+</div>
+</section>
+
+<!-- SCHOLARS -->
+<section id="scholars">
+<div class="container">
+  <p class="section-label reveal">Masters & Thinkers</p>
+  <h2 class="section-title reveal">Great <em>Scholars</em> of Ancient Bharat</h2>
+  <p class="section-intro reveal">The intellectual inheritance of Bharat's university tradition lived in its scholars. These are some of the minds who shaped global knowledge.</p>
+
+  <div class="scholar-grid reveal">
+
+    <div class="scholar-card">
+      <div class="scholar-accent"></div>
+      <div class="scholar-body">
+        <div class="scholar-era">c. 4th century BCE • Takshashila</div>
+        <div class="scholar-name">Cāṇakya / Kauṭilya</div>
+        <div class="scholar-title-text">Political Economist, Strategist, Grammarian</div>
+        <div class="scholar-bio">Possibly the most consequential administrator-intellectual in ancient Indian history. A teacher at Takshashila and later the chief minister of Chandragupta Maurya, Cāṇakya unified much of South Asia under the Maurya Empire. His <em>Arthaśāstra</em> is a comprehensive treatise on statecraft, economic policy, military strategy, and governance — arguably the world's first systematic work of political economy.</div>
+        <div class="scholar-works">
+          <div class="work-item">Arthaśāstra — 15 books on statecraft, economics, foreign policy, and war</div>
+          <div class="work-item">Cāṇakya-nīti — compiled aphorisms on practical life and ethics</div>
+          <div class="work-item">Identified (controversially) with Viṣṇugupta — noted in the colophon of the Arthaśāstra</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scholar-card">
+      <div class="scholar-accent"></div>
+      <div class="scholar-body">
+        <div class="scholar-era">c. 4th century BCE • Takshashila</div>
+        <div class="scholar-name">Pāṇini</div>
+        <div class="scholar-title-text">Grammarian, Linguist — "The First Generative Grammarian"</div>
+        <div class="scholar-bio">Author of the <em>Aṣṭādhyāyī</em> (Eight Chapters), a grammar of Sanskrit in 3,959 sūtras that describes the language with a precision that modern linguists have compared to a formal computer language specification. Written c. 4th century BCE, the <em>Aṣṭādhyāyī</em> is still used today. Panini's notation system for phonological rules anticipates concepts in formal language theory developed in the 20th century.</div>
+        <div class="scholar-works">
+          <div class="work-item">Aṣṭādhyāyī — the foundational descriptive grammar of Sanskrit</div>
+          <div class="work-item">Dhātupāṭha — the root list of Sanskrit verbs</div>
+          <div class="work-item">Gaṇapāṭha — the list of word groups referenced in the grammar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scholar-card">
+      <div class="scholar-accent"></div>
+      <div class="scholar-body">
+        <div class="scholar-era">c. 2nd century CE • Nāgārjunakoṇḍā</div>
+        <div class="scholar-name">Nāgārjuna</div>
+        <div class="scholar-title-text">Buddhist Philosopher, Founder of Mādhyamaka</div>
+        <div class="scholar-bio">One of the most influential philosophers in the history of Buddhism and one of the most important philosophers of any tradition. His <em>Mūlamadhyamakakārikā</em> (Fundamental Verses on the Middle Way) argues that all phenomena are empty (śūnya) of inherent existence — a position that transformed Mahāyāna Buddhist thought and influenced subsequent Indian, Tibetan, Chinese, and Korean philosophy for two millennia.</div>
+        <div class="scholar-works">
+          <div class="work-item">Mūlamadhyamakakārikā — systematic exposition of śūnyatā (emptiness)</div>
+          <div class="work-item">Vigrahavyāvartanī — response to objections against Madhyamaka</div>
+          <div class="work-item">Ratnāvalī — advice to a king on Buddhist ethics and statecraft</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scholar-card">
+      <div class="scholar-accent"></div>
+      <div class="scholar-body">
+        <div class="scholar-era">c. 476–550 CE • Kusumapura (Pataliputra)</div>
+        <div class="scholar-name">Āryabhaṭa</div>
+        <div class="scholar-title-text">Mathematician, Astronomer</div>
+        <div class="scholar-bio">At 23, wrote the <em>Āryabhaṭīya</em> — a 118-verse work covering arithmetic, algebra, plane and spherical trigonometry, and astronomy. He proposed the rotation of the Earth on its axis (which he called the cause of the apparent rotation of stars), calculated π as approximately 3.1416, and gave a method for computing sines. His work was translated into Arabic in the 8th century and influenced al-Khwarizmi.</div>
+        <div class="scholar-works">
+          <div class="work-item">Āryabhaṭīya — mathematics and astronomy in 118 verses</div>
+          <div class="work-item">Āryabhaṭa-siddhānta — a lost astronomical work known through later commentaries</div>
+          <div class="work-item">First to assert Earth rotates — stated as cause of rising and setting of stars</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scholar-card">
+      <div class="scholar-accent"></div>
+      <div class="scholar-body">
+        <div class="scholar-era">602–664 CE • Tang Dynasty China → Nalanda</div>
+        <div class="scholar-name">Xuanzang (Hsüan-tsang)</div>
+        <div class="scholar-title-text">Chinese Buddhist Monk, Translator, Primary Historian</div>
+        <div class="scholar-bio">Our most important external eyewitness to Nalanda at its peak. Xuanzang travelled from China overland (629 CE), studied at Nalanda for five years under Śīlabhadra, and returned with 657 Sanskrit texts. His travelogue, <em>Da Tang Xiyu Ji</em> (Records of the Western Regions), is an indispensable historical source for 7th-century India, describing institutions, politics, populations, and religious life with unusual precision.</div>
+        <div class="scholar-works">
+          <div class="work-item">Da Tang Xiyu Ji — 12-volume account of travels through Central Asia and India</div>
+          <div class="work-item">Translated 1,335 fascicles of Sanskrit texts into Chinese</div>
+          <div class="work-item">Primary source for Nalanda's scale, curriculum, and admission process</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scholar-card">
+      <div class="scholar-accent"></div>
+      <div class="scholar-body">
+        <div class="scholar-era">c. 982–1054 CE • Vikramaśīlā → Tibet</div>
+        <div class="scholar-name">Atiśa Dīpaṃkara Śrījñāna</div>
+        <div class="scholar-title-text">Buddhist Scholar, Reformer, Abbot of Vikramaśīlā</div>
+        <div class="scholar-bio">One of the most important conduits of Bengali Buddhist learning to Tibet. Atiśa was abbot of Vikramaśīlā before accepting the invitation of the Tibetan king Jangchub Ö. In Tibet, he wrote the <em>Bodhipathapradīpa</em> (Lamp on the Path to Awakening), which structured Buddhist practice as a graduated path — the foundation of all subsequent Tibetan Buddhist curriculum design, including the Lam-rim tradition of Tsongkhapa.</div>
+        <div class="scholar-works">
+          <div class="work-item">Bodhipathapradīpa — "Lamp on the Path to Awakening," foundational Tibetan text</div>
+          <div class="work-item">Over 200 works attributed to him in the Tibetan Tengyur</div>
+          <div class="work-item">Founded the Kadampa school in Tibet — ancestor of the Gelug (Dalai Lama) tradition</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- STUDENT LIFE -->
+<section id="student-life">
+<div class="container">
+  <p class="section-label reveal">Daily Life</p>
+  <h2 class="section-title reveal">How Students <em>Lived</em> and Learned</h2>
+  <p class="section-intro reveal">Education in ancient Bharat was total immersion — not merely attendance at lectures but a complete way of life structured around knowledge, community, and practice.</p>
+
+  <div class="life-grid reveal">
+    <div class="life-item">
+      <div class="life-icon">🌅</div>
+      <div class="life-title">Daily Rhythm</div>
+      <div class="life-text">Xuanzang describes Nalanda's day: rising before dawn for ablutions and meditation; morning instruction in logic and scripture; midday meal (vegetarian, communal); afternoon for debate practice and commentary composition; evening for further instruction and chanting. No "leisure" in the modern sense — free time was for reflection and private study.</div>
+    </div>
+    <div class="life-item">
+      <div class="life-icon">🗣</div>
+      <div class="life-title">The Debate Culture (Vāda)</div>
+      <div class="life-text">Intellectual debate (vāda) was not supplementary — it was central. Nalanda held public debates where scholars from other traditions could challenge resident scholars. Xuanzang records that losing a formal debate sometimes meant the loser's public humiliation or even conversion. This competitive culture drove intellectual rigour but also created institutional defensiveness.</div>
+    </div>
+    <div class="life-item">
+      <div class="life-icon">🏠</div>
+      <div class="life-title">Residential System</div>
+      <div class="life-text">The Mahāvihāra model provided monastic cells for each monk-scholar. At Nalanda, each cell was approximately 3m × 3m. At Somapura, over 900 such cells surrounded the central temple. Students were entirely supported — food, shelter, and education were free at Nalanda, funded by the revenues of 100 gift-villages (per Chinese accounts).</div>
+    </div>
+    <div class="life-item">
+      <div class="life-icon">🌏</div>
+      <div class="life-title">International Students</div>
+      <div class="life-text">Nalanda hosted students from China, Korea, Japan, Tibet, Central Asia (Sogdia, Khotan), Sri Lanka, Myanmar, and Southeast Asia. This was not a minor phenomenon — entire diplomatic missions were organised to facilitate study visits. The Korean monk Hyecho (727 CE) and Chinese monk Yijing (671–695 CE) both left accounts of their studies.</div>
+    </div>
+    <div class="life-item">
+      <div class="life-icon">📖</div>
+      <div class="life-title">Memorisation & Commentary</div>
+      <div class="life-text">The primary pedagogical mode was memorisation followed by commentary. A student first memorised a root text precisely, then heard and memorised the standard commentary, then learned the sub-commentary, and finally learned to produce original commentary. This cumulative method produced scholars who knew their tradition's entire literature verbatim — a very different epistemic culture from modern education.</div>
+    </div>
+    <div class="life-item">
+      <div class="life-icon">⚖</div>
+      <div class="life-title">Discipline & Ethics</div>
+      <div class="life-text">At Buddhist mahāvihāras, students followed the Vinaya (monastic code): no eating after noon, no entertainment, celibacy, simple dress. At Brahmanical Gurukuls, the student followed the code of brahmacarya — continence, service to the teacher, wood-gathering, and cooking. Education was moral formation as much as intellectual instruction.</div>
+    </div>
+    <div class="life-item">
+      <div class="life-icon">🎓</div>
+      <div class="life-title">Graduation & Recognition</div>
+      <div class="life-text">There were no formal degrees. A scholar's standing was determined by reputation, demonstrated mastery in debate, and the recognition of senior scholars. The most eminent scholars were called <em>paṇḍita</em> or, in the Buddhist tradition, <em>mahāpaṇḍita</em> (great scholar) — titles awarded by the institution or by royal decree, carrying significant social status.</div>
+    </div>
+    <div class="life-item">
+      <div class="life-icon">💰</div>
+      <div class="life-title">Funding & Economy</div>
+      <div class="life-text">Universities were funded by: (1) royal endowment of villages whose entire revenue went to the institution; (2) merchant guild donations (particularly for Jain and early Buddhist schools); (3) individual wealthy donors seeking religious merit. The Nalanda copper-plate grants document specific villages donated by Pāla kings. No student fees at the mahāvihāra level — the institution itself was the donor.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- DECLINE -->
+<section id="decline">
+<div class="container">
+  <p class="section-label reveal">The Burning</p>
+  <h2 class="section-title reveal">Destruction, <em>Decline</em> & the End of an Era</h2>
+  <p class="section-intro reveal">The fall of Bharat's great universities was not a single event but a process of centuries, driven by multiple forces — political, economic, and military. Distinguishing literary narrative from historical evidence is essential.</p>
+
+  <div class="decline-cards reveal">
+
+    <div class="decline-card">
+      <div class="decline-card-header">
+        <div class="decline-univ">Takshashila</div>
+        <div class="decline-date">c. 5th–6th century CE</div>
+      </div>
+      <span class="evidence-type ev-archaeological">Archaeological Evidence</span>
+      <span class="evidence-type ev-literary">Literary Sources</span>
+      <div class="decline-body">Takshashila suffered two major disruptions: (1) the Indo-Scythian and Parthian invasions of the 1st–2nd centuries CE, which disrupted patronage networks without destroying the city; (2) the devastating White Hun (Hephthalite) invasions under Mihirakula (c. 515 CE), which Xuanzang later records caused widespread destruction of Buddhist monasteries across the northwest. Subsequent Gupta recovery was incomplete. The city declined as a scholarly centre but continued as an inhabited site.</div>
+      <div class="source-note">Primary sources: Xuanzang's <em>Da Tang Xiyu Ji</em> (7th century, retrospective account); Kalhana's <em>Rājataraṅgiṇī</em> (12th century, mentions earlier destruction); ASI excavations by John Marshall (1913–34).</div>
+    </div>
+
+    <div class="decline-card">
+      <div class="decline-card-header">
+        <div class="decline-univ">Nalanda — The Contested Destruction</div>
+        <div class="decline-date">c. 1193–1234 CE</div>
+      </div>
+      <span class="evidence-type ev-literary">Literary — Persian</span>
+      <span class="evidence-type ev-literary">Literary — Tibetan</span>
+      <span class="evidence-type ev-archaeological">Partial Archaeological</span>
+      <span class="evidence-type ev-debated">Scholarly Debate</span>
+      <div class="decline-body">
+        <strong style="color:var(--sandstone);">Persian account (Minhaj-i-Siraj, c. 1260):</strong> The <em>Ṭabaqāt-i-Nāṣirī</em> describes Bakhtiyar Khilji's campaigns in Bihar but does not mention Nalanda by name — it refers to a fort/monastery. Scholars debate whether this definitively refers to Nalanda.<br><br>
+        <strong style="color:var(--sandstone);">Tibetan account (Dharmasvāmin, 1234):</strong> Describes finding elderly monks still teaching at a partially ruined Nalanda decades after the initial destruction — suggesting it was not a single catastrophic event.<br><br>
+        <strong style="color:var(--sandstone);">Earlier decline factors:</strong> Recent scholarship (notably by D.N. Jha) emphasises that Nalanda was already declining before the Khilji raids due to: loss of Pāla patronage as the dynasty weakened, economic disruption, and the gradual decline of Mahāyāna Buddhism in India.
+      </div>
+      <div class="source-note">Note: The famous "library burned for months" narrative appears in a 17th-century Tibetan text by Tāranātha — over 400 years after the event. It is widely cited but requires cautious handling as primary historical evidence.</div>
+    </div>
+
+    <div class="decline-card">
+      <div class="decline-card-header">
+        <div class="decline-univ">Vikramaśīlā & Odantapurī</div>
+        <div class="decline-date">c. 1193–1205 CE</div>
+      </div>
+      <span class="evidence-type ev-literary">Literary Sources</span>
+      <span class="evidence-type ev-archaeological">Limited Archaeological</span>
+      <div class="decline-body">The destruction of these two institutions is better attested than Nalanda's. The <em>Ṭabaqāt-i-Nāṣirī</em> more clearly references an institution in the Bihar region matching Odantapurī. Tibetan sources for Vikramaśīlā are explicit. The timing coincides with Bakhtiyar Khilji's 1203 campaign. The significant point: both institutions depended entirely on Pāla royal patronage. When the Pāla dynasty fell, no alternative funding structure existed. Military destruction accelerated an already-weakened institutional base.</div>
+      <div class="source-note">The Antichak excavations at Vikramaśīlā show burn layers and destruction consistent with a sudden abandonment, unlike Nalanda's more complex stratigraphy.</div>
+    </div>
+
+    <div class="decline-card">
+      <div class="decline-card-header">
+        <div class="decline-univ">Valabhī</div>
+        <div class="decline-date">c. 770 CE</div>
+      </div>
+      <span class="evidence-type ev-debated">Debated</span>
+      <div class="decline-body">The Arab raids on the western coast of India in the 8th century disrupted the Maitraka kingdom, which was Valabhī's patron. The institution collapsed not through any specific documented attack on the university itself but through the destruction of its political and economic support system. This illustrates a key vulnerability of state-patronage-dependent institutions: their longevity was tied directly to political stability.</div>
+    </div>
+
+    <div class="decline-card">
+      <div class="decline-card-header">
+        <div class="decline-univ">Systemic Factors — The Deeper Causes</div>
+        <div class="decline-date">Multi-century process</div>
+      </div>
+      <span class="evidence-type ev-debated">Scholarly Synthesis</span>
+      <div class="decline-body">
+        Modern historians have identified structural factors beyond individual invasions:<br><br>
+        1. <strong style="color:var(--sandstone);">Monastic over-dependence on royal patronage</strong> — no endowment model, no merchant-class alumni network funding.<br>
+        2. <strong style="color:var(--sandstone);">Institutional separation from society</strong> — Buddhist mahāvihāras were self-contained; unlike Hindu temple schools, they did not serve the general population's ritual or social needs, making them less embedded in community survival.<br>
+        3. <strong style="color:var(--sandstone);">Decline of Mahāyāna Buddhism in India</strong> — the university complex was integral to a religious tradition that was already in retreat in its homeland, partially absorbed into Hindu Tantra.<br>
+        4. <strong style="color:var(--sandstone);">Military disruption</strong> — the actual raids accelerated collapse of already weakened systems, removing the patronage that might have enabled recovery.
+      </div>
+      <div class="source-note">Sources: D.N. Jha, <em>Against the Grain</em>; Romila Thapar, <em>Early India</em>; Sheldon Pollock, <em>The Language of the Gods in the World of Men</em>.</div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- SOURCES -->
+<section id="sources">
+<div class="container">
+  <p class="section-label reveal">Primary Sources & Archaeology</p>
+  <h2 class="section-title reveal">Historical <em>Evidence</em> and Its Reliability</h2>
+  <p class="section-intro reveal">Our knowledge of ancient Indian universities rests on a layered evidentiary base — each source type carrying its own strengths and limitations.</p>
+
+  <div class="sources-grid reveal">
+
+    <div class="source-card">
+      <div class="source-type">Chinese Pilgrimage Account</div>
+      <div class="source-name">Da Tang Xiyu Ji</div>
+      <div class="source-author">Xuanzang (Hsüan-tsang) • c. 646 CE</div>
+      <div class="source-note">12-volume account of travels through Central Asia and India (629–645 CE). Includes detailed descriptions of Nalanda — its population, architecture, admission process, curriculum, and daily life. Considered the single most important external primary source for 7th-century Indian institutions. Some figures (10,000 students) may be approximate or rhetorical; the institutional description is broadly consistent with archaeological evidence.</div>
+      <div class="reliability">
+        <span class="reliability-label">Historical Reliability</span>
+        <div class="rel-dots">
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-type">Chinese Pilgrimage Account</div>
+      <div class="source-name">Fǎxiǎn's Travels</div>
+      <div class="source-author">Fa-Hien (Faxian) • c. 414 CE</div>
+      <div class="source-note">Earlier Chinese account covering the Gupta period. Less detailed than Xuanzang on specific institutions but provides evidence for a thriving Buddhist monastic culture in northern India during the 5th century. Describes Magadha, Pataliputra, and Mathura. Useful for establishing the pre-Nalanda landscape of Buddhist learning.</div>
+      <div class="reliability">
+        <div class="rel-dots">
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot"></div>
+          <div class="rel-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-type">Persian Historical Text</div>
+      <div class="source-name">Ṭabaqāt-i-Nāṣirī</div>
+      <div class="source-author">Minhaj-i-Siraj Juzjani • c. 1260 CE</div>
+      <div class="source-note">The primary Islamic historical source for Bakhtiyar Khilji's campaigns in Bihar. Written approximately 70 years after the events it describes. Does not name Nalanda specifically — refers to a fort/monastery. Scholars debate which institution is intended. Treats the monks as "Brahmins" — a misidentification that some historians read as evidence that the author/soldiers did not clearly distinguish Buddhist from Hindu institutions.</div>
+      <div class="reliability">
+        <div class="rel-dots">
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot"></div>
+          <div class="rel-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-type">Tibetan Historical Text</div>
+      <div class="source-name">Chos-'byung (History of Buddhism)</div>
+      <div class="source-author">Tāranātha • 1608 CE</div>
+      <div class="source-note">A Tibetan Buddhist history written over 400 years after Nalanda's destruction. Contains the famous account of the library burning for "months." While invaluable for preserving institutional memory, this must be used with significant caution as primary evidence for events in 12th-13th century India. It reflects Tibetan Buddhist institutional memory rather than direct historical documentation.</div>
+      <div class="reliability">
+        <div class="rel-dots">
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot"></div>
+          <div class="rel-dot"></div>
+          <div class="rel-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-type">Archaeological Survey</div>
+      <div class="source-name">ASI Excavations — Nalanda</div>
+      <div class="source-author">Archaeological Survey of India • 1915–1956 (primary campaigns)</div>
+      <div class="source-note">Major excavations beginning with Spooner (1915) and continuing through multiple campaigns revealed 11 major monasteries and 6 brick temples. Carbon-dated burn layers at several points. The exposed ruins represent only a fraction of the total site area. Copper-plate inscriptions found at Nalanda document Pāla royal donations. These physical remains are our strongest evidence of institutional scale.</div>
+      <div class="reliability">
+        <div class="rel-dots">
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-type">Pāli Literature</div>
+      <div class="source-name">Jātaka Tales (547 stories)</div>
+      <div class="source-author">Pāli Canon • compiled c. 3rd century BCE – 5th century CE</div>
+      <div class="source-note">The Jātaka tales repeatedly reference students travelling to Takshashila for education — making it the single most frequently mentioned educational destination in Pāli literature. While these are didactic narratives (not historical documents), the consistent references to Takshashila as an educational centre across hundreds of independent tales constitutes meaningful cumulative evidence for its scholarly reputation in the pre-CE period.</div>
+      <div class="reliability">
+        <div class="rel-dots">
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot filled"></div>
+          <div class="rel-dot"></div>
+          <div class="rel-dot"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+  <p class="section-label reveal">Most Asked Questions</p>
+  <h2 class="section-title reveal">Frequently <em>Debated</em> Questions</h2>
+
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        Was Nalanda really the world's first university?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        This claim requires precise definition. If "university" means a residential institution of higher learning with multiple faculties, an organised curriculum, and students from diverse regions — Nalanda (5th century CE) and Takshashila (c. 700 BCE) both qualify, predating the University of Bologna (1088 CE) and Oxford (c. 1096 CE) by centuries. However, the Academy of Athens (387 BCE) and the Library of Alexandria also predate Nalanda. The debate often reflects definitional disputes rather than genuine historical disagreement. What is not disputed: Nalanda was among the largest and most institutionally sophisticated centres of learning in the ancient world.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        Did the Nalanda library really burn for three months?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        This specific claim comes from Tāranātha's 17th-century Tibetan text — written over 400 years after the events it describes. The claim that the library was so large it burned for three months has no corroboration in any contemporary source. It may reflect institutional memory of a genuinely large manuscript collection, or it may be rhetorical amplification. The archaeological evidence at Nalanda does show burn layers, confirming some destruction by fire. The scale of the library is separately attested by Xuanzang (7th century) as exceptional. The "three months" figure should be treated as legendary, not historical.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        Were these truly "secular" universities, or religious institutions?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        The secular/religious distinction is largely anachronistic for this context. Nalanda and Vikramaśīlā were Buddhist monastic universities — the religious and educational functions were inseparable. However, their curricula were not exclusively religious: Xuanzang records instruction in logic, grammar, medicine, and astronomy alongside Buddhist philosophy. Similarly, Takshashila taught archery, military science, and statecraft. The closest parallel in Western history might be medieval European cathedral schools and universities, which were embedded in the Church but taught the full range of knowledge. The modern concept of a secular institution would have been meaningless to these scholars.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        Why did Hindu learning centres survive while Buddhist universities did not?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        A crucial question with a structural answer. Buddhist mahāvihāras were centralised, monument-dependent institutions that required continuous royal patronage. When patronage ended and physical structures were destroyed, the institution ended. Hindu/Brahmanical learning was distributed — embedded in family lineages, village networks, and temple systems. A grammarian family in Mithilā or a Vedic scholar lineage in Kāśī could continue teaching without any building or royal grant. This diffusion made Brahmanical learning far more resilient to political disruption. The same dynamic explains why Jain learning also survived — Jain merchant networks provided funding independent of any single political patron.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        Did women study at these institutions?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        The evidence is mixed and period-specific. In the Vedic and Upanishadic periods, women scholars are explicitly attested: Gārgī Vācaknavī debates publicly at Janaka's court in the Bṛhadāraṇyaka Upanishad; Maitreyi is described as a brahmodya (philosophical discourse) participant. In the Gurukul tradition, some female students (brahminī) are recorded. However, the Buddhist mahāvihāras at their height were primarily monastic — and bhikkhunī (nuns' orders) had separate institutions. Large-scale female participation in the Nalanda-type institution is not attested. The post-Gupta period shows a contraction in documented female scholarly participation relative to the earlier Vedic period.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        What is Nalanda University today?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Nalanda University was revived as a modern institution by an act of the Indian Parliament in 2010, opened its first academic session in 2014, and is located near the original site in Bihar. It offers postgraduate and doctoral programmes in Buddhist studies, history, ecology, and international relations. The ancient ruins are separately maintained as an ASI-protected heritage site and UNESCO World Heritage Site (2016). The modern institution is distinct from the historical one but represents a deliberate civilisational continuity project. George Yeo (former Singapore foreign minister) was its first chancellor.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SUMMARY -->
+<section id="summary">
+<div class="container">
+  <p class="section-label reveal" style="text-align:center;">Civilizational Legacy</p>
+  <h2 class="section-title reveal" style="text-align:center;">What These Universities <em>Gave the World</em></h2>
+
+  <div class="summary-quote reveal">
+    When the rest of the world was in relative darkness, the lamp of learning burned brightest in the valleys of the Gaṅgā — and its light reached China, Tibet, Southeast Asia, and ultimately, through Arabic transmission, the West.
+  </div>
+  <p class="summary-attr reveal">— A synthesis of scholarly consensus, not a direct quote from any single source</p>
+
+  <div class="legacy-grid reveal">
+    <div class="legacy-item">
+      <div class="legacy-num">01</div>
+      <div class="legacy-text">The decimal number system and zero — transmitted via Arabic scholarship to Europe, foundational to all modern mathematics</div>
+    </div>
+    <div class="legacy-item">
+      <div class="legacy-num">02</div>
+      <div class="legacy-text">Formal logic traditions: Nyāya and Buddhist pramāṇa — the most sophisticated ancient systems of epistemology outside Greece</div>
+    </div>
+    <div class="legacy-item">
+      <div class="legacy-num">03</div>
+      <div class="legacy-text">Āyurveda and surgical knowledge (Suśruta-saṃhitā) — influencing medieval Islamic medicine through translations</div>
+    </div>
+    <div class="legacy-item">
+      <div class="legacy-num">04</div>
+      <div class="legacy-text">Tibetan Buddhism's entire intellectual and monastic framework — a direct transplantation of Nalanda and Vikramaśīlā's tradition</div>
+    </div>
+    <div class="legacy-item">
+      <div class="legacy-num">05</div>
+      <div class="legacy-text">Southeast Asian temple architecture: Somapura's cruciform design visible in Bagan's Ananda Temple, Angkor's layout principles</div>
+    </div>
+    <div class="legacy-item">
+      <div class="legacy-num">06</div>
+      <div class="legacy-text">Pāṇini's grammar — considered by modern linguists a formal generative grammar 2,300 years before Chomsky's work</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">॥ Bharat Vidya — Ancient Universities of India ॥</div>
+  <p class="footer-note">An educational archive dedicated to the great knowledge centres of ancient Bharat.</p>
+  <p class="footer-disclaimer">
+    This platform is an educational resource. All historical claims are attributed to their sources. Literary traditions are distinguished from archaeological evidence throughout. Scholarly disputes are noted honestly. The goal is accurate, respectful, and rigorous engagement with Bharat's intellectual heritage.
+    <br><br>
+    Key scholarly references: Xuanzang, <em>Da Tang Xiyu Ji</em> (646 CE) • Minhaj-i-Siraj, <em>Ṭabaqāt-i-Nāṣirī</em> (c. 1260) • ASI Excavation Reports (Nalanda, Vikramaśīlā, Somapura) • Romila Thapar, <em>Early India</em> • D.N. Jha, <em>Against the Grain</em> • Sheldon Pollock, <em>The Language of the Gods in the World of Men</em> • UNESCO World Heritage documentation.
+  </p>
+</footer>
+
+<script>
+// Generate starfield
+(function() {
+  const container = document.getElementById('stars');
+  if (!container) return;
+  for (let i = 0; i < 80; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDuration = (2 + Math.random() * 4) + 's';
+    star.style.animationDelay = (Math.random() * 4) + 's';
+    const size = Math.random() > 0.7 ? 3 : 2;
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    star.style.opacity = 0.1 + Math.random() * 0.5;
+    container.appendChild(star);
+  }
+})();
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => observer.observe(el));
+
+// University expand
+function openUniversityModal(button){
+
+  const card = button.closest('.univ-card');
+
+  const name = card.querySelector('.univ-name').innerHTML;
+  const sanskrit = card.querySelector('.univ-sanskrit-name').innerHTML;
+  const location = card.querySelector('.univ-loc').innerHTML;
+  const desc = card.querySelector('.univ-desc').innerHTML;
+  const tags = card.querySelector('.univ-stat-row').innerHTML;
+  const details = card.querySelector('.univ-details').innerHTML;
+
+  const modal = document.getElementById('univModal');
+
+  document.getElementById('univModalBody').innerHTML = `
+  
+    <div class="modal-univ-name">${name}</div>
+
+    <div class="modal-univ-sanskrit">
+      ${sanskrit}
+    </div>
+
+    <div class="modal-univ-location">
+      ${location}
+    </div>
+
+    <div class="univ-stat-row modal-tags">
+      ${tags}
+    </div>
+
+    <div class="modal-univ-desc">
+      ${desc}
+    </div>
+
+    <div class="modal-details">
+      ${details}
+    </div>
+
+  `;
+
+  // OPEN MODAL
+  modal.style.display = 'flex';
+
+  // LOCK PAGE SCROLL
+  document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
+
+  // FORCE RESET MODAL SCROLL
+  requestAnimationFrame(() => {
+
+    const scrollContainer =
+      modal.querySelector('.univ-modal-scroll');
+
+    if(scrollContainer){
+
+      scrollContainer.scrollTop = 0;
+
+      // extra mobile safety
+      scrollContainer.scrollTo({
+        top:0,
+        behavior:'instant'
+      });
+
+    }
+
+  });
+
+}
+
+function closeUniversityModal(){
+
+  document.getElementById('univModal').style.display = 'none';
+
+  document.body.style.overflow = 'auto';
+}
+
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+window.addEventListener('click', function(e){
+
+  const modal = document.getElementById('univModal');
+
+  if(e.target === modal){
+    closeUniversityModal();
+  }
+
+});
+
+// FAQ
+function toggleFAQ(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q.open').forEach(q => q.classList.remove('open'));
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+</script>
+
+<!-- UNIVERSITY MODAL -->
+
+<div id="univModal" class="univ-modal">
+
+  <div class="univ-modal-content">
+
+    <button class="modal-close"
+            onclick="closeUniversityModal()">
+      ✕
+    </button>
+
+    <!-- INNER SCROLL AREA -->
+    <div class="univ-modal-scroll">
+
+      <div id="univModalBody"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
+});
+
+function disableBodyScroll(){
+  document.body.style.overflow = 'hidden';
+}
+
+function enableBodyScroll(){
+  document.body.style.overflow = '';
+}
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const observer = new MutationObserver(() => {
+    const modal = document.querySelector('.univ-modal');
+
+    if(!modal) return;
+
+    const visible = getComputedStyle(modal).display !== 'none';
+
+    if(visible){
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+  });
+
+  observer.observe(document.body, {
+    childList:true,
+    subtree:true,
+    attributes:true
+  });
+
+});
+</script>
+
+</body>
+</html>

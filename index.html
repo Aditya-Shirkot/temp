@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Index</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f7;
+            --card-bg: #ffffff;
+            --text-main: #1c1c1e;
+            --text-sub: #8e8e93;
+            --border-radius: 18px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 10px 10px;
+        }
+
+        /* Title Card Styles (Turned into an anchor tag) */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            min-height: 100px;
+            box-sizing: border-box;
+            text-decoration: none; /* Removes underline from links */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Hover effect to indicate clickability */
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Text Container */
+        .card-content {
+            flex: 1;
+            padding-right: 120px; /* Ensures text doesn't overlap the solid part of the image */
+            z-index: 2;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin: 0 0 6px 0;
+        }
+
+        .card-subtitle {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Image/Visual Container with Fade Effect */
+        .card-visual {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            z-index: 1;
+            /* The mask that creates the fade effect when meeting the text */
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to left, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+        }
+
+        .card-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Test Gradients for top 2 cards */
+        .gradient-1 {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+
+        .gradient-2 {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Table of Contents</h1>
+
+        <a href="Bharat_Universities_Responsive_Fixed_v2.html" target="_blank" class="card">
+            <div class="card-content">
+                <h2 class="card-title">Chapter 1: The Beginning</h2>
+                <p class="card-subtitle">An introduction to the foundational concepts and history.</p>
+            </div>
+            <div class="card-visual gradient-1"></div>
+        </a>
+
+        <a href="Sanatan_Dharma_Atlas_Responsive_Optimized_v2.html" target="_blank" class="card">
+            <div class="card-content">
+                <h2 class="card-title">Chapter 2: Deep Dive</h2>
+                <p class="card-subtitle">Exploring advanced mechanics, structures, and systems.</p>
+            </div>
+            <div class="card-visual gradient-2"></div>
+        </a>
+
+        <a href="Devabhumi_Final_Mobile_Fixes_v2.html" target="_blank" class="card">
+            <div class="card-content">
+                <h2 class="card-title">Chapter 3: Architecture</h2>
+                <p class="card-subtitle">Understanding spatial design, frameworks, and structural layout.</p>
+            </div>
+            <div class="card-visual">
+                <img src="https://pics
